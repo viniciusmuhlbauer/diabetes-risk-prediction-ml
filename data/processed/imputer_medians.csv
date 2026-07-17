@@ -1,0 +1,14 @@
+feature,median_imputed
+Pregnancies,3.0
+Glucose,117.0
+BloodPressure,72.0
+SkinThickness,29.0
+Insulin,125.0
+BMI,32.4
+DiabetesPedigreeFunction,0.3825
+Age,29.0
+AgeGroup,0.0
+BMICategory,3.0
+GlucoseCategory,1.0
+Insulin_Missing,0.0
+GlucoseXBMI,3782.7000000000003

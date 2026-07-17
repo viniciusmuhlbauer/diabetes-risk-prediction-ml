@@ -1,0 +1,53 @@
+======================================================================
+RELATÓRIO DE AVALIAÇÃO DOS MODELOS
+Projeto: Diabetes Risk Prediction
+======================================================================
+
+MÉTRICAS COMPLETAS (Conjunto de Teste):
+----------------------------------------
+             Model  AUC-ROC  Recall (Sens.)  Precision  F1-Score  Specificity  TP  FP  TN  FN
+      RandomForest   0.8254          0.7593     0.6212    0.6833         0.75  41  25  75  13
+               KNN   0.8200          0.5926     0.6154    0.6038         0.80  32  20  80  22
+LogisticRegression   0.8167          0.7222     0.5909    0.6500         0.73  39  27  73  15
+  GradientBoosting   0.8124          0.5926     0.6667    0.6275         0.84  32  16  84  22
+      DecisionTree   0.7449          0.4815     0.5417    0.5098         0.78  26  22  78  28
+
+MODELO RECOMENDADO (maior AUC-ROC):
+  RandomForest
+  AUC-ROC:  0.8254
+  Recall:   0.7593
+  F1-Score: 0.6833
+
+MODELO DE MAIOR SENSIBILIDADE (triagem conservadora):
+  RandomForest
+  Recall:   0.7593
+  FN (diabéticos não detectados): 13
+
+ANÁLISE DE ERROS CLÍNICOS:
+----------------------------------------
+  RandomForest              FN=13 (24.1% dos diabéticos não detectados) | FP=25
+  KNN                       FN=22 (40.7% dos diabéticos não detectados) | FP=20
+  LogisticRegression        FN=15 (27.8% dos diabéticos não detectados) | FP=27
+  GradientBoosting          FN=22 (40.7% dos diabéticos não detectados) | FP=16
+  DecisionTree              FN=28 (51.9% dos diabéticos não detectados) | FP=22
+
+LIMITAÇÕES DO PROJETO:
+----------------------------------------
+1. Dataset restrito: 768 observações — pequeno para generalização clínica
+2. Viés de população: apenas mulheres ≥21 anos com herança indígena Pima
+3. Alta taxa de ausência em Insulin (48.7%) — imputação introduz incerteza
+4. Desfecho: diagnóstico em 5 anos — não aplicável para diagnóstico atual
+5. Sem validação externa em populações independentes
+6. Modelos não calibrados — probabilidades podem ser imprecisas
+
+RECOMENDAÇÕES PARA USO CLÍNICO:
+----------------------------------------
+• NÃO utilizar como ferramenta diagnóstica independente
+• Uso como ferramenta de TRIAGEM auxiliar ao julgamento clínico
+• Priorizar Recall sobre Precision em contexto de triagem
+• Validar em população local antes de implantação
+• Monitorar performance e recalibrar periodicamente
+
+======================================================================
+FIM DO RELATÓRIO
+======================================================================

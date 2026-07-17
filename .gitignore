@@ -1,0 +1,43 @@
+# Ambiente virtual
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Dados sensíveis (nunca versionar dados brutos grandes)
+# Descomente se o CSV for grande:
+# data/raw/
+
+# Modelos serializados grandes
+# models/*.pkl
+
+# Outputs gerados (regeneráveis)
+outputs/figures/*.png
+outputs/figures/*.svg
+outputs/reports/*.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente
+.env
+*.env

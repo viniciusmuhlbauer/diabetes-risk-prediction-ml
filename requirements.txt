@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+jupyter
+ipykernel
+
+black
+flake8
+
+joblib
