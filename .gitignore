@@ -25,8 +25,6 @@ build/
 # models/*.pkl
 
 # Outputs gerados (regeneráveis)
-outputs/figures/*.png
-outputs/figures/*.svg
 outputs/reports/*.html
 
 # IDE
